@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt #for my graphs for the second question
 def boston():
     boston = load_boston() #loading data from sklearn library
     model = LinearRegression() #calling the type of model
-    features,label = boston.data, boston.target #using sklearn to split data into training and testing features and labels
+    features,label = boston.data, boston.target #using sklearn to split data into features and labels
     model.fit(features,label) #fit model to training data
     df = pd.DataFrame([boston.feature_names,model.coef_]).T #coefficients to see each factors strength
     #wanted to do lasso regression but wasn't sure if that truly answered the question
